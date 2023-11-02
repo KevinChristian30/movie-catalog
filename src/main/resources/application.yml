@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 600000
+      idle-timeout: 6000000
+      max-lifetime: 18000000
+      maximum-pool-size: 10
+    url: jdbc:postgresql://nostra-postgresql-db.ch5g3jvldf2t.ap-southeast-1.rds.amazonaws.com/kevin_movie_db
+    username: academy
+    password: welcome1
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 100
+          batch_versioned_data: true
+        order_inserts: true
+        order_updated: true
+    show-sql: true
+configuration:
+  token-duration: 15000000
+  secret-key: alskdj12908isufdkjcvbmxnvzwjherwieuyfsa98we7rkafdhakfbczvnx
+  review-edit-limit: 2
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
